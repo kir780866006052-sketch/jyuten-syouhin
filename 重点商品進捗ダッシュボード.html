@@ -135,7 +135,7 @@ table.detail-table td:nth-child(3),table.detail-table td:nth-child(4){font-famil
   <div>
     <h1>サービス重点商品拡販実績</h1>
     <div class="sub">函館日産自動車 サービス支援グループ</div>
-    <div class="generated-at">集計日: 2026年09月13日 12:22</div>
+    <div class="generated-at">集計日: 2026年09月13日 18:46</div>
   </div>
   <div class="half-tabs" id="halfTabs"></div>
   <div class="month-tabs" id="monthTabs"></div>
@@ -153,7 +153,7 @@ table.detail-table td:nth-child(3),table.detail-table td:nth-child(4){font-famil
   <div class="product-grid ca-chart-grid" id="caChart"></div>
   <div class="section-head"><h2>商品別サマリー(対象6店舗)</h2></div>
   <div class="product-grid" id="productGrid"></div>
-  <div class="section-head" style="margin-top:34px;"><h2>商品別 CA販売ランキング(対象6店舗)</h2></div>
+  <div class="section-head" style="margin-top:34px;"><h2>商品別 CA販売ランキング(対象8店舗)</h2></div>
   <div class="product-grid" id="rankingGrid"></div>
   </div>
 </main>
@@ -565,7 +565,7 @@ function openProductRankingDetail(p){
     return `<div class="rank-row rank-row-lg">${badge}<div class="rname rname-lg">${e.ca}<span class="rstore rstore-lg">(${e.store})</span></div><div class="rqty rqty-lg">${e.qty}${unit}</div></div>`;
   }).join('') : `<div style="color:var(--text-dim);font-size:14px;padding:12px 0;">実績なし</div>`;
   document.getElementById('bigChartModalTitle').textContent = `${p} ー CA販売ランキング`;
-  document.getElementById('bigChartModalSub').textContent = `対象6店舗 上位${top5.length}名`;
+  document.getElementById('bigChartModalSub').textContent = `対象8店舗 上位${top5.length}名`;
   document.getElementById('bigChartModalBody').innerHTML = `<div class="rank-list-lg">${rows}</div>`;
   document.getElementById('bigChartModal').style.display = 'flex';
 }

@@ -75,13 +75,13 @@ main{padding:26px 28px 60px;max-width:1400px;margin:0 auto;}
 .product-card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px 12px;cursor:pointer;transition:border-color .15s,transform .15s;}
 .product-card:hover{border-color:var(--line-hover);transform:translateY(-2px);}
 .product-card .pname{font-size:12.5px;font-weight:600;margin-bottom:12px;min-height:32px;}
-.product-chart{display:flex;align-items:flex-end;gap:6px;height:150px;padding:0 2px;overflow-x:auto;}
+.product-chart{display:flex;align-items:flex-end;gap:6px;height:168px;padding:0 2px;overflow-x:auto;overflow-y:hidden;}
 .pbar-col{flex:1;display:flex;flex-direction:column;align-items:center;height:100%;justify-content:flex-end;}
-.pbar-pct{font-family:var(--mono);font-size:10.5px;font-weight:700;color:var(--text);margin-bottom:4px;}
-.pbar-track{width:100%;max-width:20px;height:110px;background:var(--track);border-radius:3px 3px 0 0;display:flex;align-items:flex-end;overflow:hidden;}
+.pbar-pct{font-family:var(--mono);font-size:10.5px;font-weight:700;color:var(--text);margin-bottom:4px;line-height:14px;}
+.pbar-track{width:100%;max-width:20px;height:110px;flex-shrink:0;background:var(--track);border-radius:3px 3px 0 0;display:flex;align-items:flex-end;overflow:hidden;}
 .pbar-fill{width:100%;border-radius:3px 3px 0 0;}
-.pbar-label{font-size:10px;font-weight:600;color:var(--text);margin-top:6px;white-space:nowrap;height:12px;}
-.pbar-fig{font-size:10px;font-weight:700;color:var(--text);font-family:var(--mono);margin-top:2px;white-space:nowrap;height:11px;}
+.pbar-label{font-size:10px;font-weight:600;color:var(--text);margin-top:6px;white-space:nowrap;height:15px;line-height:15px;}
+.pbar-fig{font-size:10px;font-weight:700;color:var(--text);font-family:var(--mono);margin-top:2px;white-space:nowrap;height:14px;line-height:14px;}
 .fill-low{background:var(--red);} .fill-mid{background:var(--amber);} .fill-high{background:var(--green);}
 .rank-row{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--line);}
 .rank-row:last-child{border-bottom:none;}
@@ -141,7 +141,7 @@ table.detail-table td:nth-child(3),table.detail-table td:nth-child(4){font-famil
   <div>
     <h1>サービス重点商品拡販実績</h1>
     <div class="sub">函館日産自動車 サービス支援グループ</div>
-    <div class="generated-at">集計日: 2026年11月16日 22:53</div>
+    <div class="generated-at">集計日: 2026年11月16日 23:26</div>
   </div>
   <div class="half-tabs" id="halfTabs"></div>
   <div class="month-tabs" id="monthTabs"></div>

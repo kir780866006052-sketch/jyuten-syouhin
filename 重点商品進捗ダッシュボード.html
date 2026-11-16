@@ -9,7 +9,7 @@
 <style>
 :root{
   --bg:#26446b; --panel:#f1f5fa; --panel-2:#e3eaf3; --line:#d3dce6; --line-hover:#9fb0c6;
-  --text:#1b2a41; --text-dim:#5a6a82; --red:#c8102e; --amber:#e08e0b;
+  --text:#1b2a41; --text-dim:#3c4c63; --red:#c8102e; --amber:#e08e0b;
   --green:#1f9d62; --qty:#3b66c9; --track:#dde4ee; --top-from:#1b3358; --top-to:#14284a;
   --selected-bg:#fdecef; --chip-bg:#e1f2e9; --chip-line:#b3d9c4; --chip-text:#14744a;
   --on-badge:#1b2a41; --overlay:rgba(10,20,40,.6); --shadow:0 1px 3px rgba(5,15,35,.35);
@@ -60,28 +60,28 @@ main{padding:26px 28px 60px;max-width:1400px;margin:0 auto;}
 .ca-chart-grid{grid-template-columns:repeat(auto-fill,minmax(230px,1fr));margin-bottom:34px;}
 .ca-group{display:flex;flex-direction:column;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 12px 12px;cursor:pointer;transition:border-color .15s;}
 .ca-group:hover{border-color:var(--line-hover);}
-.ca-bars{display:flex;align-items:flex-end;justify-content:center;gap:4px;height:150px;width:100%;border-bottom:1px solid var(--line);}
+.ca-bars{display:flex;align-items:flex-end;justify-content:center;gap:4px;height:160px;width:100%;border-bottom:1px solid var(--line);}
 .ca-bar-col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;width:20px;cursor:pointer;}
 .ca-bar-col:hover .ca-bar-track{outline:1px solid var(--qty);}
 .ca-bar-col:hover .ca-name{color:var(--text);}
-.ca-bar-pct{font-family:var(--mono);font-size:9px;color:var(--text-dim);margin-bottom:3px;}
+.ca-bar-pct{font-family:var(--mono);font-size:10px;font-weight:700;color:var(--text);margin-bottom:3px;}
 .ca-bar-track{width:14px;height:130px;background:var(--track);border-radius:3px 3px 0 0;display:flex;align-items:flex-end;overflow:hidden;}
 .ca-bar-fill{width:100%;border-radius:3px 3px 0 0;background:var(--qty);}
-.ca-name{font-size:9px;color:var(--text-dim);margin-top:6px;line-height:1.3;text-align:center;height:44px;overflow:visible;}
+.ca-name{font-size:10px;font-weight:600;color:var(--text);margin-top:6px;line-height:1.3;text-align:center;height:40px;flex-shrink:0;overflow:visible;}
 .ca-group-label{margin-top:8px;font-size:12px;font-weight:700;color:var(--text);text-align:center;max-width:200px;line-height:1.4;}
-.ca-group-target{font-size:10px;color:var(--text-dim);font-family:var(--mono);margin-top:2px;}
+.ca-group-target{font-size:11px;font-weight:600;color:var(--text-dim);font-family:var(--mono);margin-top:2px;}
 .product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;}
-.store-summary-grid{grid-template-columns:repeat(auto-fill,minmax(340px,1fr));margin-bottom:30px;}
+.store-summary-grid{grid-template-columns:repeat(auto-fill,minmax(min(460px,100%),1fr));margin-bottom:30px;}
 .product-card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px 12px;cursor:pointer;transition:border-color .15s,transform .15s;}
 .product-card:hover{border-color:var(--line-hover);transform:translateY(-2px);}
 .product-card .pname{font-size:12.5px;font-weight:600;margin-bottom:12px;min-height:32px;}
-.product-chart{display:flex;align-items:flex-end;gap:8px;height:150px;padding:0 2px;}
+.product-chart{display:flex;align-items:flex-end;gap:6px;height:150px;padding:0 2px;overflow-x:auto;}
 .pbar-col{flex:1;display:flex;flex-direction:column;align-items:center;height:100%;justify-content:flex-end;}
-.pbar-pct{font-family:var(--mono);font-size:9.5px;color:var(--text-dim);margin-bottom:4px;}
+.pbar-pct{font-family:var(--mono);font-size:10.5px;font-weight:700;color:var(--text);margin-bottom:4px;}
 .pbar-track{width:100%;max-width:20px;height:110px;background:var(--track);border-radius:3px 3px 0 0;display:flex;align-items:flex-end;overflow:hidden;}
 .pbar-fill{width:100%;border-radius:3px 3px 0 0;}
-.pbar-label{font-size:9px;color:var(--text-dim);margin-top:6px;white-space:nowrap;height:12px;}
-.pbar-fig{font-size:9px;color:var(--text-dim);font-family:var(--mono);margin-top:2px;white-space:nowrap;height:11px;}
+.pbar-label{font-size:10px;font-weight:600;color:var(--text);margin-top:6px;white-space:nowrap;height:12px;}
+.pbar-fig{font-size:10px;font-weight:700;color:var(--text);font-family:var(--mono);margin-top:2px;white-space:nowrap;height:11px;}
 .fill-low{background:var(--red);} .fill-mid{background:var(--amber);} .fill-high{background:var(--green);}
 .rank-row{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--line);}
 .rank-row:last-child{border-bottom:none;}
@@ -131,6 +131,8 @@ table.detail-table{width:100%;border-collapse:collapse;margin-top:14px;}
 table.detail-table th,table.detail-table td{padding:12px 10px;border-bottom:1px solid var(--line);font-size:14px;text-align:left;}
 table.detail-table th{color:var(--text-dim);font-weight:600;font-size:12.5px;}
 table.detail-table td:nth-child(3),table.detail-table td:nth-child(4){font-family:var(--mono);font-size:13px;color:var(--text-dim);}
+/* PC(幅1360px以上)は店舗別サマリーを3列 / それ未満はiPad横2列・縦1列 (2026-11-16) */
+@media (min-width:1360px){.store-summary-grid{grid-template-columns:repeat(3,minmax(0,1fr));}.store-summary-grid .product-card{padding-left:10px;padding-right:10px;}.store-summary-grid .product-chart{gap:4px;}}
 @media (max-width:560px){main{padding:20px 14px 40px;}.topbar{padding:16px 16px 14px;}}
 </style>
 </head>
@@ -139,7 +141,7 @@ table.detail-table td:nth-child(3),table.detail-table td:nth-child(4){font-famil
   <div>
     <h1>サービス重点商品拡販実績</h1>
     <div class="sub">函館日産自動車 サービス支援グループ</div>
-    <div class="generated-at">集計日: 2026年11月16日 18:33</div>
+    <div class="generated-at">集計日: 2026年11月16日 22:53</div>
   </div>
   <div class="half-tabs" id="halfTabs"></div>
   <div class="month-tabs" id="monthTabs"></div>
